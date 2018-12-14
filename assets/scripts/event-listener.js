@@ -1,22 +1,21 @@
 /**
- * Created by chu on 2017/10/9 0009.
+ * Created by chu on 2017/10/10 0010.
  */
 const EventListener = function (obj) {
-  let Register = {};
-  obj.on = function (name, method) {
-    if (!Register.hasOwnProperty(name)){
-        Register[name] = [];
+  let Regsiter = {};
+  obj.on = function (name , method) {
+    if (!Regsiter.hasOwnProperty(name)){
+      Regsiter[name] = [];
     }
-    Register[name].push(method);
-  }
-  ;
+    Regsiter[name].push(method);
+  };
   obj.fire = function (name) {
-    if (Register.hasOwnProperty(name)){
-      let handlerList = Register[name];
-      for (let i = 0 ; i < handlerList.length ; i ++){
+    if (Regsiter.hasOwnProperty(name)){
+      let handlerList = Regsiter[name];
+      for  (let i = 0 ; i < handlerList.length ; i ++){
         let handler = handlerList[i];
         let args = [];
-        for (let j = 1 ; j < arguments.length ; j ++){
+        for (let j = 1 ; j < arguments.length ;j ++){
           args.push(arguments[j]);
         }
         handler.apply(this, args);
@@ -24,15 +23,15 @@ const EventListener = function (obj) {
     }
   };
   obj.off = function (name, method) {
-    if (Register.hasOwnProperty(name)){
-      let handleList = Register[name];
-      for (let i = 0 ; i < handleList.length ; i ++){
-        if (handleList[i] === method){
-          handleList.splice(i, 1);
+    if (Regsiter.hasOwnProperty(name)){
+      let handlerList = Regsiter[name];
+      for (let i = 0 ; i < handlerList.length ; i ++){
+        if (handlerList[i] === method){
+          handlerList.splice(i, 1);
         }
       }
     }
   };
-  return obj;
+  return obj
 };
 export default EventListener;

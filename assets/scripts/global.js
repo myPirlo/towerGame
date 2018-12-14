@@ -1,7 +1,7 @@
 /**
- * Created by chu on 2017/10/9 0009.
+ * Created by chu on 2017/10/10 0010.
  */
 import EventListener from './event-listener'
-let global = {} || global;
-global.gameEvent = EventListener({});
+const global = global || {};
+global.event = EventListener({});
 export default global;

@@ -1,6 +1,6 @@
 {
   "ver": "2.2.0",
-  "uuid": "cbda8b52-c685-42d1-932a-dc3af4ae2b63",
+  "uuid": "7102702f-bdb4-4aec-b253-ad2985b5582f",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -8,8 +8,8 @@
   "subMetas": {
     "塔防_17": {
       "ver": "1.0.3",
-      "uuid": "9e781b4b-330a-4611-b201-2a47f8e447a5",
-      "rawTextureUuid": "cbda8b52-c685-42d1-932a-dc3af4ae2b63",
+      "uuid": "bf14fda5-b116-4513-955a-a14f92c0d656",
+      "rawTextureUuid": "7102702f-bdb4-4aec-b253-ad2985b5582f",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
